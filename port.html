@@ -1,0 +1,722 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio Website</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/brands.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;600&display=swap');
+
+#headerBgcontainer{
+    background-color: rgba(25, 8, 68, 0.627);
+
+}
+:root{
+    --yellow:#609ec7;
+}
+.edu{
+    padding-top: 5rem;
+  color :whitesmoke;
+    font-size: 2rem;
+}
+
+*{
+    font-family: 'Nunito', sans-serif;
+    margin:0; padding:0;
+    box-sizing: border-box;
+    text-decoration: none;
+    outline: none; border:none;
+/*text-transform: capitalize;*/
+    transition: all .2s linear;
+}
+
+*::selection{
+    background:var(--yellow);
+    color:#211d1d;
+}
+
+html{
+    font-size: 62.5%;
+    overflow-x: hidden;
+}
+
+html::-webkit-scrollbar{
+    width:1.4rem;
+}
+
+html::-webkit-scrollbar-track{
+    background:#222;
+}
+
+html::-webkit-scrollbar-thumb{
+    background:var(--yellow);
+}
+
+body{
+    background:#03020d;
+    overflow-x: hidden;
+    padding-left: 35rem;
+}
+
+section{
+    min-height: 100vh;
+    padding:1rem;
+}
+
+.btn{
+    padding:.7rem 3rem;
+    background:#333;
+    color:#fff;
+    cursor: pointer;
+    margin-top: 1rem;
+    font-size: 2rem;
+    border-radius: 5rem;
+}
+
+.btn i{
+    padding:0 .5rem;
+    font-size: 1.8rem;
+}
+
+.btn:hover{
+    background:var(--yellow);
+}
+
+.heading{
+    text-align: center;
+    margin:0 6rem;
+    font-size: 4rem;
+    padding:1rem;
+    border-bottom: .1rem solid #fff4;
+    color:#fff;
+}
+
+.heading span{
+    color:var(--yellow);
+}
+
+header{
+    position: fixed;
+    top:0; left:0;
+    z-index: 1000;
+    height:100%;
+    width:320px;
+    background:#1a1a1a;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-flow: column;
+    text-align: center;
+    border: 1px solid rgb(255, 0, 0);
+}
+
+header .user img{
+    height:17rem;
+    width:17rem;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 1rem;
+    border:.7rem solid rgba(0, 238, 251, 0.855) ;
+}
+
+header .user .name{
+    font-size: 3.5rem;
+    color:#fff;
+}
+
+header .user .post{
+    font-size: 2rem;
+    color:#eee;
+}
+
+header .navbar{
+    width:100%;
+}
+
+header .navbar ul{
+    list-style: none;
+    padding:1rem 3rem;
+}
+
+
+header .navbar ul li a{
+    display: block;
+    padding:1rem;
+    margin:1.5rem 0;
+    background:#333;
+    color:#fff;
+    font-size: 2rem;
+    border-radius: 5rem;
+}
+
+header .navbar ul li a:hover{
+    background:var(--yellow);
+}
+
+#menu{
+    position: fixed;
+    top:2rem; right:2rem;
+    background:#2e2e2e;
+    color:#fff;
+    cursor: pointer;
+    font-size: 2.5rem;
+    padding:1rem 1.5rem;
+    z-index: 1000;
+    display: none;
+}
+
+.home{
+    display: flex;
+    justify-content: center;
+    flex-flow: column;
+    padding:0 15rem;
+}
+
+.home h3{
+    font-size: 2.5rem;
+    color:#fff;
+}
+
+.home h1{
+    font-size:5rem;
+    color:#fff;
+}
+
+.home h1 span{
+    color:var(--yellow);
+}
+
+.home p{
+    font-size:2rem;
+    color:#eee;
+    padding: 1rem 0;
+}
+
+.about .row{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding:1rem 0;
+}
+
+.about .row .info{
+    flex:1 1 48rem;
+    padding:2rem 1rem;
+    padding-left: 6rem;
+}
+
+.about .row .info h3{
+    font-size: 2rem;
+    color:whitesmoke;
+    padding:1rem 0;
+    font-weight: normal;
+}
+
+.about .row .info h3 span{
+    color:#eee;
+    padding:0 .5rem;
+}
+
+.about .row .counter{
+    flex:1 1 48rem;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.about .row .counter .box{
+    width:20rem;
+    background:#222;
+    text-align: center;
+    padding: 2rem;
+    margin:2rem;
+}
+
+.about .row .counter .box span{
+    font-size: 4rem;
+    color:var(--yellow);
+}
+
+.about .row .counter .box h3{
+    font-size: 2rem;
+    color:#fff;
+}
+
+.education .box-container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding:1rem 0;
+    padding-left: 3rem;
+}
+
+.education .box-container .box{
+    width:27rem;
+    margin:4rem 1rem;
+    padding-left: 4rem;
+    border-left: .2rem solid #fff;
+    position: relative;
+}
+
+.education .box-container .box span{
+    font-size: 1.3rem;
+    background:#222;
+    color:#fff;
+    border-radius: 5rem;
+    padding:.5rem 2.5rem;
+}
+
+.education .box-container .box h3{
+    font-size: 2rem;
+    color:#fff;
+    padding-top: 1.5rem;
+}
+
+.education .box-container .box p{
+    font-size: 1.4rem;
+    color:#eee;
+    padding: 1rem 0;
+}
+
+.education .box-container .box i{
+    position: absolute;
+    top:-1.5rem; left:-2.5rem;
+    height:5rem;
+    width: 5rem;
+    border-radius: 50%;
+    line-height: 5rem;
+    text-align: center;
+    font-size: 2rem;
+    color:#fff;
+    background:var(--yellow);
+}
+#skills-and-abilities {
+    height: 760px;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.skills-abilities {
+    margin-top: 30px;
+}
+
+.skills-abilities ul {
+    list-style-type: none;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.skills-abilities ul li {
+    font-size: large;
+    font-weight: 500;
+    margin: 4px 0;
+}
+
+.skill-item {
+    
+    padding: 25px;
+    background-color: inherit;
+    color: #cccfe4;
+    border: 1px solid #fff;
+    border-radius: 15px;
+    cursor: pointer;
+    width: 250px;
+    height: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 30px;
+    font-size: 17px;
+}
+
+.skill-item:hover {
+    color: rgb(240, 232, 232);
+    background-color: rgb(0, 0, 1);
+}
+
+.skill-item p {
+    text-align: center;
+}
+
+.contact .row{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    height: 3rem;
+}
+
+.contact .row .content{
+    flex:1 1 30rem;
+    padding:1rem;
+    padding-bottom: 0;
+}
+
+.contact .row form{
+    flex:1 1 45rem;
+    padding:2rem;
+    margin:2rem;
+    margin-bottom: 4rem;
+}
+
+/*.contact .row form .box{
+    padding:1.5rem;
+    margin:1rem 0;
+    background:#3333;
+    color:#fff;
+    text-transform: none;
+    font-size: 1.7rem;
+    width:100%;
+}*/
+
+.contact .row form .box::placeholder{
+    text-transform: capitalize;
+}
+
+.contact .row form .message{
+    height: 1rem;
+    resize: none;
+}
+
+.contact .row .content .title{
+    text-transform: uppercase;
+    color:#fff;
+    font-size: 3rem;
+   
+    padding-bottom: 3rem;
+}
+
+.contact .row .content .info h3{
+    display: flex;
+    align-items: center;
+    font-size: 2rem;
+    color:#eee;
+    padding:1rem 0;
+    font-weight: normal;
+}
+
+.contact .row .content .info h3 i{
+    padding-right: 2rem;
+    color:var(--yellow);
+    
+}
+
+.top{
+    position: fixed;
+    bottom:0.5rem; right: 1rem;
+    z-index: 100;
+    display: none;
+}
+
+.portfolio{
+    
+    margin: 50px 0px 0px 180px;
+    display:flex;
+
+}
+.gallery{
+    display:flex;
+    width: 100%;
+    aspect-ratio: 2/1;
+    margin: 20px 10px -10px 20px;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    scroll-snap-type:x mandatory;
+
+   
+}
+.gallery::-webkit-scrollbar {
+    display: none;
+}
+.gallery_item:hover{
+    background-color: red;
+    border: 2px solid rgb(0, 191, 255);
+}
+    .gallery_item {
+        background-color: lightblue;
+        width: 300px;
+        height: 300px;
+        border: 1px solid rgb(234, 0, 0);
+        aspect-ratio: 3/1;
+        margin: 20px 10px 0px 10px;
+        font-size: 20px;
+        border-radius: 10px;
+      }
+@media (max-width:1200px){
+
+    html{
+        font-size: 55%;
+    }
+
+    .home{
+        padding:1rem 4rem;
+    }
+
+}
+
+@media (max-width:991px){
+
+   header{
+       left:-120%;
+   }
+
+   #menu{
+       display: block;
+   }
+
+   header.toggle{
+    left:0%;
+   }
+
+   body{
+       padding:0;
+   }
+
+}
+
+@media (max-width:768px){
+
+    html{
+        font-size: 50%;
+    }
+ 
+ }
+
+@media (max-width:400px){
+
+    header{
+        width: 100vw;
+    }
+
+    .heading{
+        margin:0 3rem;
+    }
+
+    .about .row .counter .box{
+        width: 100%;
+    }
+ 
+    .education .box-container .box{
+        width:100%;
+    }
+
+    /* .portfolio .box-container .box{
+        width:100%;
+    } */
+/* 
+    .contact .row form{
+        margin:1rem 0;
+    } */
+
+ }
+ .skill{
+    display:flex;
+ }
+ 
+    </style>
+
+</head>
+<body>
+<header id="headerBgcontainer">
+
+    <div class="user">
+        <img src="photo.jpg" alt="">
+        <h3 class="name">Asish Kumar Pydi</h3>
+        <p class="post">Software Developer</p>
+    </div>
+
+    <nav class="navbar">
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#education"> Education</a></li>
+            <li><a href="#portfolio"> My Skills</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+</header>
+
+<div id="menu" class="fas fa-bars"></div>
+
+<section class="home" id="home">
+
+    <h3>HI THERE !</h3>
+    <h1>I'M <span>Asish</span></h1>
+    <p>Student Of B.Tech Pre-Final year
+    </p>
+    <a href="#contact"><button class="btn">Hire Me <i class="fas fa-user"></i></button></a>
+    <a href="Resume.pdf"><button class="btn">My Resume <i class="fas fa-user"></i></button></a>
+
+    <a href="#about"><button class="btn">About Me <i class="fas fa-user"></i></button></a>
+
+
+</section>
+
+<section class="about" id="about">
+
+<h1 class="heading"> <span>About</span> Me </h1>
+
+<div class="row">
+    <div class="info">
+   <h3> Hello Everyone!
+    I am Asish,Currently in a Pre-Final year in Computer Science and Engineering Department From Vishnu Institute of Technology Bhimavaram.
+     I have keen interest in Software Development,I'm quit skilled in Programming,Web development and little in Machine Learning.
+      I have the knowledge of Java,C language, Python, DBMS, OS,Git and Github.
+    Finally, I'm Aspiring Software Developer Position.    </h3>
+    </div>
+        <div class="gallery">
+            <div class="gallery_item" style="background-image: url('cycle4.jpg'); background-size: cover;">
+                <h1>Solved 50 Problems In Leetcode</h1>
+                <p>I know that Programming is that most essentail part for anyone who want to be a software professional. so, i'm increasing my ability in problem solving</p>
+                <a href="https://leetcode.com/PYDI_ASISH_KUMAR/">Click here</a>
+            </div>
+
+            <div class="gallery_item" style="background-image: url('cycle2.jpg'); background-size: cover;">
+                <h1>Weather Information App</h1>
+                <p>Created a simple weather report app using react and node js which have Login and Signup page and is connected with database</p>
+                <a href="https://github.com/ASISH5E5/Weather_Report">Click here</a>
+            </div>
+            <div class="gallery_item" >
+                <h1>Temparature Converter</h1>
+                <p>created a simple temperature converter using Html,css,js .This application converts temparature from one unit other two units.</p>
+                <a href="https://github.com/ASISH5E5/Weather_Report">Click here</a>
+
+            </div>
+            <div class="gallery_item" >
+           <h1>Created simple to-do list</h1>
+           <p>In This project i created a simple to-do list which holds the tasks we want to do.</p>
+           <a href="#">Click Here</a>
+        </div>
+          </div>
+
+    
+
+   
+
+</section>
+<section class="education" id="education">
+
+    <h1 class="heading"> <span>My </span>Education </h1>
+    
+   
+        <div class="edu">
+            <div class="info">
+                
+                <ul>
+                    <li>Vishnu Institute of Technology< Bhimavaram<br>
+                        (2021-25)-Pursuing<br>
+                        B.Tech- Computer Science And Engineering <br>
+                        Current SGPA : 8.5
+
+                    </li>
+                    <br>
+                    <li>Aditya Junior College Palkol<br>
+                        [2019-21]<br>
+                        Intermediate <br>
+                        Score: 93%;
+                    </li>
+                    <br>
+                    <li>Z.P.P.O.H School Gummaluru <br>
+                        2019<br>
+                        SSC Board <br>
+                        Score:93%</li>
+                  </ul>
+                  <br>                
+            </div>
+        </div>
+
+<section id="portfolio">
+
+    <h1 class="heading"> My <span>Skills and Abilities</span> </h1>
+
+    <div class="portfolio">
+        <ul>
+            <li>
+                <div class="skill-item">
+                    <p>Problem Solving</p>
+                </div>
+            </li>
+            <li>
+                <div class="skill-item">
+                    <p>Java</p>
+                </div>
+            </li>
+
+            <li>
+                <div class="skill-item">
+                    <p>Python</p>
+                </div>
+            </li>
+            
+           
+            
+        </ul>
+        <ul>
+            <li>
+                <div class="skill-item">
+                    <p>HTML,CSS,JS,REACT,Node js,Express,Firebase</p>
+                </div>
+            </li>
+            <li>
+                <div class="skill-item">
+                    <p>SQL</p>
+                </div>
+            </li>
+            <li>
+                <div class="skill-item">
+                    <p>Git and Github</p>
+                </div>
+            </li>
+            
+          
+        </ul>
+    </div>
+
+</section>
+
+<section class="contact" id="contact">
+
+<h1 class="heading"> <span>Contact</span> me </h1>
+
+<div class="row">
+
+    <div class="content">
+
+        <h3 class="title">contact info</h3>
+
+        <div class="info">
+            <h3 class="on"> <i class="fas fa-envelope"></i>Asishp5742@gmail.com </h3>
+            <h3 > <i class="fas fa-phone"></i> 9963485742 </h3>
+            <h3> <i class="fas fa-map-marker-alt"></i> Andhra Pradesh, india. </h3>
+           <h3> <a  href="https://www.linkedin.com/in/pydi-asish-kumar-612a39250/" ><h3> <i class="fab fa-linkedin-in" style='font-size:28px;color:rgb(69, 126, 176) '> </i> </a> Linkedin</h3>
+            
+    
+        </div>
+
+    </div>
+</section>
+
+
+
+<a href="#home" class="top">
+    <img src="images/scroll-top-img.png" alt="">
+</a>
+
+
+
+
+</body>
+</html>
